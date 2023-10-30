@@ -1,10 +1,16 @@
+const server = require("http").createServer();
+const io = require("socket.io")(server);
 
-const io = require("socket.io")(5000, {
-    cors: {
-        origin: ["https://snake-server-ahmeds-projects-7378a362.vercel.app"],
-        methods: ["GET", "POST"],
-    }
-})
+const cors = {
+  origin: "https://snake-blush.vercel.app", // Your React app's URL
+  methods: ["GET", "POST"],
+};
+
+io.origins(cors.origin); // Set allowed origins
+
+// Rest of your Socket.io server code
+
+server.listen(5000); // Adjust the port if needed
 let boardSize = null
 let foodCellKey = null
 let foodServed = false
