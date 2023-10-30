@@ -9,7 +9,7 @@
     "socket.io-client": "^4.7.2"
   },
   "scripts": {
-    "devStart": "node sever.js"
+    "start": "node sever.js"
   },
   "devDependencies": {
     "webpack-cli": "^5.1.4",
