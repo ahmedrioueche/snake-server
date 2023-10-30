@@ -1,7 +1,7 @@
 
 const io = require("socket.io")(5000, {
     cors: {
-        origin: ["http://snake-blush.vercel.app"]
+        origin: ["https://snake-blush.vercel.app"]
     }
 })
 let boardSize = null
