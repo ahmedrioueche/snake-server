@@ -1,7 +1,7 @@
 
 const io = require("socket.io")(5000, {
     cors: {
-        origin: ["https://snake-server-ahmeds-projects-7378a362.vercel.app/"],
+        origin: ["https://snake-server-ahmeds-projects-7378a362.vercel.app"],
         methods: ["GET", "POST"],
     }
 })
