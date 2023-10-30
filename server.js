@@ -1,4 +1,4 @@
-const io = require("socket.io")(5000, {
+const io = require("socket.io")(3000, {
     cors: {
         origin: ["https://snake-blush.vercel.app"]
     }
