@@ -1,20 +1,8 @@
-const http = require("http");
-const express = require("express");
-const { Server } = require("socket.io");
-
-const app = express();
-const server = http.createServer(app);
-const io = new Server(server, {
-  cors: {
-    origin: "https://snake-blush.vercel.app", 
-    methods: ["GET", "POST"],
-  },
-});
-
-server.listen(5000, () => {
-  console.log("Server is running on port 5000");
-});
-
+const io = require("socket.io")(5000, {
+    cors: {
+        origin: ["https://snake-blush.vercel.app"]
+    }
+})
 let boardSize = null
 let foodCellKey = null
 let foodServed = false
